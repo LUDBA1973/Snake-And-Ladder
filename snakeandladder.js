@@ -13,6 +13,8 @@ console.log("die roll :", die);
 // usecase 3 - player checks for options no-play, ladder, snake
 const options = Math.floor(Math.random() * 3);
 console.log("options :", options);
+// usecase 5 - Ensure player gets to exact winning position 100
+let lastPosition = playerPosition;
 if (options === 0) {
   console.log("no play and player position remains same",playerPosition);
 }
@@ -29,5 +31,11 @@ else if (options === 2) {
 }
 if (playerPosition < start) {
     playerPosition = start;
+    console.log("Cant go below 0, reset to:", playerPosition);
+
+}
+if (playerPosition > end) {
+    playerPosition = lastPosition;
+    console.log("Cant go above 100, reset to:", playerPosition);
 }
 }
