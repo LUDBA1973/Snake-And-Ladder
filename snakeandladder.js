@@ -6,3 +6,22 @@ console.log("playerPosition", playerPosition);
 // usecase 2 - player rolls the die to get a number between 1 to 6
 const die = Math.floor(Math.random() * 6) + 1;
 console.log("die roll :", die);
+
+// usecase 3 - player checks for options no-play, ladder, snake
+const options = Math.floor(Math.random() * 3);
+console.log("options :", options);
+if (options === 0) {
+  console.log("no play and player position remains same",playerPosition);
+}
+else if (options === 1){
+    console.log("ladder");
+    playerPosition += die;
+    console.log("New PlayerPosition :", playerPosition);
+
+}
+else if (options === 2) {
+    console.log("snake");
+    playerPosition -= die;
+    console.log("New PlayerPosition :", playerPosition);
+}
+
