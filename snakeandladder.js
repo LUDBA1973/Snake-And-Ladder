@@ -5,11 +5,13 @@ console.log("playerPosition", playerPosition);
 
 // usecase 4 - repeat till player reaches position 100
 const end = 100;
+// usecase 6 - number of times the die is rolled to win the game
+let dieCount = 0;
 while (playerPosition < end) {
 // usecase 2 - player rolls the die to get a number between 1 to 6
 const die = Math.floor(Math.random() * 6) + 1;
 console.log("die roll :", die);
-
+dieCount++;
 // usecase 3 - player checks for options no-play, ladder, snake
 const options = Math.floor(Math.random() * 3);
 console.log("options :", options);
@@ -38,4 +40,5 @@ if (playerPosition > end) {
     playerPosition = lastPosition;
     console.log("Cant go above 100, reset to:", playerPosition);
 }
+console.log("Total die rolls:", dieCount);
 }
