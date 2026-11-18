@@ -42,3 +42,4 @@ if (playerPosition > end) {
 }
 console.log("Total die rolls:", dieCount);
 }
+console.log("Player reached position 100 and won the game!");
