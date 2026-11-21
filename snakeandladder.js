@@ -83,6 +83,10 @@ switch (playerpositions[player]) {
         playerpositions[player] = 7;
         console.log("Player", playernumber, "got a snake and moved to position 7");
         break;
+    case 32:
+        playerpositions[player] = 18;
+        console.log("Player", playernumber, "got a snake and moved to position 18");
+        break;
     case 54:
         playerpositions[player] = 34;
         console.log("Player", playernumber, "got a snake and moved to position 34");
